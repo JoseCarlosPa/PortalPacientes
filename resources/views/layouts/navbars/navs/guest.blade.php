@@ -1,54 +1,42 @@
-<nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
-    <div class="container">
-        <a class="navbar-brand" href="{{ route('home') }}">
-            <img src="{{ asset('argon') }}/img/brand/Logo_Colores.png" />
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse navbar-custom-collapse collapse" id="navbar-collapse">
-            <!-- Collapse header -->
-            <div class="navbar-collapse-header">
-                <div class="row">
-                    <div class="col-6 collapse-brand">
-                        <a href="{{ route('home') }}">
-                            <img src="{{ asset('argon') }}/img/brand/Logo_Colores.png">
-                        </a>
-                    </div>
-                    <div class="col-6 collapse-close">
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Navbar items -->
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}">
-                        <span class="nav-link-inner--text text-black">{{ __('Panel de Admin') }}</span>
-                    </a>
+
+
+<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+
+    <!-- layout-medium -->
+    <div class="layout-medium">
+
+        <!-- site-title : image-logo -->
+        <h1 class="site-title">
+            <a href="{{'/'}}" rel="home">
+                <img src="{{ asset('argon') }}/img/brand/logoPacientes.png" alt="Pacientes">
+                <span class="screen-reader-text">Pacientes</span>
+            </a>
+        </h1>
+        <a class="menu-toggle"><span class="lines"></span></a>
+
+        <!-- nav-menu -->
+        <div class="nav-menu text-center" style="margin-left: 30%" >
+            <ul>
+                <li><a href="{{'/'}}">INICIO</a>
                 </li>
-                @guest
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">
-                            <span class="nav-link-inner--text text-black">{{ __('Iniciar Sesion') }}</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">
-                            <span class="nav-link-inner--text text-black">{{ __('Registrarse') }}</span>
-                        </a>
-                    </li>
-                @endguest
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('profile.edit') }}">
-                        <span class="nav-link-inner--text text-black">{{ __('Perfil') }}</span>
-                    </a>
+                <li><a href="blog-single-video.html">PRESENTACIONES</a>
                 </li>
+                <li><a href="about.html">ACERCA DE NOSOTROS</a></li>
+                <li><a href="contact.html">CONTACTO</a></li>
             </ul>
+        </div>
+        <!-- nav-menu -->
+        <!-- social-container -->
+        <div class="social-container">
+            <a class="social-link facebook" href="#"></a>
+            <a class="social-link twitter" href="#"></a>
+            <a class="social-link instagram" href="#"></a>
+            <a href ="">Iniciar Sesion</a>
+            <a href ="">| Registrate </a>
 
         </div>
+        <!-- social-container -->
     </div>
+    <!-- layout-medium -->
+
 </nav>
